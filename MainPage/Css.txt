@@ -1,0 +1,107 @@
+.carousel-item {
+    height: 600px;
+  }
+  
+  .c-img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .bg-dark{
+    background-color:#192965!important;
+  }
+  .marketing{
+    margin-top:30px;
+  }
+  .searchBox {
+    display: flex;
+    align-items: center;
+    background:#F0EFEF;
+    border-radius: 50px;
+    position: relative;
+    max-width: 230px;
+    padding-right: 10px;
+    margin-left: auto; /* aligns to the right */
+  }
+  
+  .searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: #192965;
+    font-size: 15px;
+    padding: 12px 40px 12px 16px;
+    width: 100%;
+  }
+  
+  .searchButton {
+    position: absolute;
+    right: 5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #FAAFFF 0%, #192965 100%);
+    color: #DBCC8F;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  }
+  
+  /* Hover & active */
+  .searchButton:hover {
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+  }
+  
+  .searchButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  .nav-item a{
+    color:#FAAFFF !important;
+  }
+  .navbar-brand{
+    color:#FAAFFF;
+  }
+  .btn-outline-light {
+    border-radius: 20px;
+    color: #FAAFFF;
+    border: 1px solid #FAAFFF;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-light:hover {
+    color: #192965;
+    background-color: #FAAFFF;
+  }
+  
+  .btn-outline-light:active {
+    background-color: #BBCFFF !important;
+    color: #F0EFEF !important;
+    border-color: #BBCFFF !important;
+  }
+  .btn-primary {
+    background-color: #FAAFFF;
+    color: #192965;
+    border-radius: 20px;
+    border: 1px solid #FAAFFF;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #F0EFEF;
+    border-color: #192965;
+    color:#FAAFFF;
+  }
+  
+  .btn-primary:active {
+    background-color: #BBCFFF !important;
+    color: #F0EFEF !important;
+    border-color: #BBCFFF !important;
+  }
