@@ -9,3 +9,16 @@
     background-color: #fff;
     color: #192965;
   }
+
+  /* FeaturesSection.css */
+.feature-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}

@@ -1,12 +1,15 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = ({ brandName, links, showSearch, showAuthButtons }) => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        {/* Brand link - using Link instead of anchor tag */}
+        <Link className="navbar-brand" to="/">
           {brandName}
-        </a>
+        </Link>
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -15,16 +18,24 @@ const Navbar = ({ brandName, links, showSearch, showAuthButtons }) => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+        
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav me-auto mb-2 mb-md-0">
             {links.map((link, index) => (
               <li className="nav-item" key={index}>
-                <a className="nav-link active" href={link.href}>
+                {/* Use NavLink for better active state handling */}
+                <NavLink 
+                  className={({ isActive }) => 
+                    `nav-link ${isActive ? "active" : ""}`
+                  } 
+                  to={link.href}
+                >
                   {link.name}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
+          
           {showSearch && (
             <form className="searchBox d-flex me-3" role="search">
               <input
@@ -50,14 +61,17 @@ const Navbar = ({ brandName, links, showSearch, showAuthButtons }) => {
               </button>
             </form>
           )}
+          
           {showAuthButtons && (
             <div className="d-flex">
-              <a href="#" className="btn btn-outline-light me-2">
+              {/* Login button with Link */}
+              <Link to="/login" className="btn btn-outline-light me-2">
                 Login
-              </a>
-              <a href="#" className="btn btn-primary">
+              </Link>
+              {/* Sign Up button with Link */}
+              <Link to="/register" className="btn btn-primary">
                 Sign Up
-              </a>
+              </Link>
             </div>
           )}
         </div>
