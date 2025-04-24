@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title || "Login" %></title>
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+  <body>
+    <section>
+      <div class="login-box">
+        <form action="<%= loginAction || '#' %>" method="POST">
+          <h2>Login</h2>
+          <div class="input-box">
+            <span class="icon"></span>
+            <input type="email" name="email" required />
+            <label>Enter your email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"></span>
+            <input type="password" name="password" required />
+            <label>Enter your password</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox" name="remember" /> Remember me
+            </label>
+            <a href="/forgot-password">forgot password</a>
+          </div>
+
+          <button type="submit">Login</button>
+          <div class="register-link">
+            <p>Don't have an account? <a href="/register">Register</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
