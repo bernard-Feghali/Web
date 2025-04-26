@@ -8,26 +8,27 @@ import CarRental from './pages/CarPage/CarRental.jsx'; // Import your CarPage co
 // In your App.jsx or routing file
 import Login from './pages/LoginPage/Login';
 import Register from './pages/LoginPage/Register.jsx';
+import CarImage from "./pages/HomePage/Images/Car.png";
+import CleanImage from "./pages/HomePage/Images/Clean.png"
+import TutorImage from "./pages/HomePage/Images/Tutor.png";
 
 // Your existing data
 const carouselImages = [
   {
-    image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80",
-    title: "Create",
+    image: CarImage,
+    title: "",
     alt: "Creative Design",
     position: "text-start",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1400&q=80",
-    title: "Personalize",
+    image: CleanImage,
+    title: "",
     alt: "Customizing Products",
     position: "text-center",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1400&q=80",
+      TutorImage,
     title: "Express",
     alt: "Artistic Expression",
     position: "text-end",
