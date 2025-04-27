@@ -5,12 +5,20 @@ import Carousel from "./pages/HomePage/Carousel.jsx";
 import FeaturesSection from "./pages/HomePage/FeaturesSection.jsx";
 import Footer from './pages/HomePage/Footer.jsx';
 import CarRental from './pages/CarPage/CarRental.jsx'; // Import your CarPage component
-// In your App.jsx or routing file
 import Login from './pages/LoginPage/Login';
 import Register from './pages/LoginPage/Register.jsx';
+//images
 import CarImage from "./pages/HomePage/Images/Car.png";
-import CleanImage from "./pages/HomePage/Images/Clean.png"
+import CleanImage from "./pages/HomePage/Images/Clean.png";
 import TutorImage from "./pages/HomePage/Images/Tutor.png";
+import CarRentalLogo from './Images/CarRental.png';
+//pages
+import ContactForm from "./pages/contact-form/ContactForm.jsx";
+import TutorApp from './pages/Tutoring/TutorApp.jsx';
+import CleanApp from './pages/Cleaning/CleanApp.jsx';
+
+
+
 
 // Your existing data
 const carouselImages = [
@@ -39,21 +47,21 @@ const features = [
   {
     name: "T&Co",
     title: "Car Rental",
-    image: "https://randomuser.me/api/portraits/men/11.jpg",
+    image: CarRentalLogo,
     link: "/cars"
   },
 
   {
     name: "Cleaning",
     title: "Clean",
-    image: "https://randomuser.me/api/portraits/men/11.jpg",
+    image: CarRentalLogo,
     link: "/cleaning"
   },
 
   {
     name: "tutors",
     title: "Tutoring",
-    image: "https://randomuser.me/api/portraits/men/11.jpg",
+    image: CarRentalLogo,
     link: "/tutoring"
   },
   // ... (keep your other features)
@@ -64,7 +72,7 @@ const links = [
   { name: "Home", href: "/" },
   // { name: "Cars", href: "/cars" }, // New link to CarPage
   { name: "About", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Contact", href: "/contact" },
 ];
 
 function HomePage() {
@@ -81,35 +89,25 @@ function App() {
   return (
     <Router>
       <Navbar
-        brandName="Our Mahal Name"
+        brandName="SkillShare"
         links={links}
         showSearch={true}
         showAuthButtons={true}
       />
-    {/* Connecting To Login Page   */}
-      <Routes>
-      {/* ... other routes ... */}
-      <Route path="/login" element={<Login />} />
-    </Routes>
-    {/* End Cnnection Of Login*/}
-
-
-    {/* Connecting To Sign up Page   */}
-    <Routes>
-      {/* ... other routes ... */}
-      <Route path="/register" element={<Register />} />
-    </Routes>
-     {/* end connection To Sign up Page   */}
-
-
+    
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/contact" element={<ContactForm />} /> {/*Contact Form Route*/}
+        <Route path="/cleaning" element={<CleanApp/>} />
+        <Route path="/tutoring" element={<TutorApp/>} />
         <Route path="/cars" element={<CarRental />} /> {/* CarPage route */}
       </Routes>
       
       <Footer
         year={new Date().getFullYear()}
-        company="Our Mahal Name"
+        company="SkillShare"
         icons={["twitter", "instagram", "facebook"]}
       />
     </Router>
